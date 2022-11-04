@@ -10,6 +10,7 @@ public class Application {
         ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
         ShoppingCart cart = context.getBean(ShoppingCart.class);
         System.out.println(cart.getAddress());
-        cart.checkout();
+        cart.checkout("COMMITTED");
+        cart.quantity();
     }
 }
